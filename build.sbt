@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.github.tarao" %%% "record4s" % "0.10.0",
-  "com.github.tarao" %%% "record4s-circe" % "0.10.0"
+  "com.github.tarao" %%% "record4s-circe" % "0.10.0",
+  "com.lihaoyi" %%% "os-lib" % "0.9.3"
 )
 
 // set to Debug for compilation details (Info is default)
@@ -46,5 +47,5 @@ bindgenBindings := Seq(
       "voicevox"
     )
     .addCImport("voicevox_core.h")
-    .build
+    .build,
   )
