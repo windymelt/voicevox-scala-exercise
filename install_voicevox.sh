@@ -18,4 +18,5 @@ chmod u+x download-script
 ./download-script
 # it inflates into ./voicevox_core/
 sudo cp ./voicevox_core/libonnxruntime.so.1.13.1  ./voicevox_core/libvoicevox_core.so "${PREFIX}/"
-sudo ln -s "${PREFIX}/libonnxruntime.so.1.13.1" "${PREFIX}/libonnxruntime.so"
+sudo ln -fs "${PREFIX}/libonnxruntime.so.1.13.1" "${PREFIX}/libonnxruntime.so"
+sudo cp -r ./voicevox_core/model "${PREFIX}/model"
