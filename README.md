@@ -2,6 +2,10 @@
 
 このサンプルは、Scala Nativeを使ってVOICEVOX Core C APIを呼び出し、音声合成を実行します。生成される成果物は直接マシンが実行可能なネイティブバイナリです。
 
+## VOICEVOX Coreをインストールする
+
+付属のスクリプトでVOICEVOXを`/usr/local/lib/`以下にインストールできます。辞書ファイルなどは`./voicevox_core`以下に保存されます。
+
 ## バインディングを生成する
 
 voicevox-coreのためのScalaバインディング/Cグルーコードは既に`./src/main/resources/scala-native/generated`と`./src/main/scala/generated`にコミット済みですが、APIが更新された場合は以下の手順を踏むことで再生成できます。
