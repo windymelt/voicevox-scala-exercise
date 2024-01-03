@@ -3,3 +3,4 @@
 target/
 .bsp
 *.~undo-tree~
+voicevox_core/

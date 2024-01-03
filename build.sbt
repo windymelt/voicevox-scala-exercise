@@ -29,7 +29,7 @@ nativeConfig := {
     .withMode(Mode.debug) // releaseFast
     .withGC(GC.immix) // commix
     .withLinkingOptions(
-      List("-lvoicevox_core", "-lonnxruntime", "-L", "/usr/local/lib/")
+      List("-L", "/usr/local/lib/", "-lvoicevox_core", "-lonnxruntime")
     )
     .withCompileOptions(Seq("-I", ((Compile / resourceDirectory).value / "scala-native").toString))
 }
@@ -43,8 +43,8 @@ bindgenMode := Manual(
 bindgenBindings := Seq(
   Binding
     .builder(
-      (Compile / resourceDirectory).value / "scala-native" / "voicevox_core.h",
-      "voicevox"
+      header = (Compile / resourceDirectory).value / "scala-native" / "voicevox_core.h",
+      packageName = "voicevox"
     )
     .addCImport("voicevox_core.h")
     .build,

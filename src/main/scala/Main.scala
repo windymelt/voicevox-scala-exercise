@@ -39,7 +39,7 @@ object Main {
       // C API requires CString on Scala Native (due to inner layout).
       // We can write CString literal using `c` interpolator.
       // CAVEAT: c interpolator does not work for UTF-8 string e.g. c"日本語"
-      open_jtalk_dict_dir = c"./open_jtalk_dic_utf_8-1.11"
+      open_jtalk_dict_dir = c"./voicevox_core/open_jtalk_dic_utf_8-1.11"
     )
     print("initializing voicevox...")
 
